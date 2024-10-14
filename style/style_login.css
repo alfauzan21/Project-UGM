@@ -1,0 +1,61 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+/* Body and container styles */
+body {
+  background-color: #083d62;
+}
+
+/* Login box styling */
+.login-box {
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.login-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Login header with logo and text */
+.login-header img.logo {
+  width: 50px;
+  height: 50px;
+}
+
+.login-header h2 {
+  color: #083d62;
+}
+
+/* Input field styling */
+.form-floating label {
+  color: #083d62;
+}
+
+.form-floating .form-control {
+  border: none;
+  border-bottom: 2px solid #083d62;
+  background: transparent;
+  outline: none;
+}
+
+.form-floating .form-control:focus {
+  border-color: #fdbc2c;
+  box-shadow: none;
+}
+
+/* Button styling */
+.login-btn {
+  background-color: #fdbc2c;
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: #d59b22;
+}
