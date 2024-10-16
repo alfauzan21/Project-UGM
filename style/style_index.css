@@ -1,4 +1,3 @@
-/* Style for the brand text */
 .navbar-brand {
   font-family: "Inria Serif", serif;
   /* Apply Inria Serif font */
@@ -58,7 +57,7 @@
 
 /* Hero Section */
 .hero {
-  background: url("assets/img/gedung ugm.jpg") no-repeat center center/cover;
+  background: url("../assets/img/gedung\ ugm.jpg") no-repeat center center/cover;
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -85,14 +84,14 @@
 .hero::after {
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -10px;
   left: 0;
   width: 100%;
   height: 100px;
   /* Adjust the height of the blur */
   background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.8));
   z-index: 3;
-  filter: blur(8px);
+  filter: blur(10px);
   /* Adjust the blur strength */
 }
 
@@ -195,4 +194,144 @@
   .brand-text .gadjah-mada {
     font-size: 12px;
   }
+}
+
+/* Animasi untuk teks */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animasi untuk gambar */
+@keyframes fadeInImage {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Animasi untuk shape */
+@keyframes fadeInShape {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Gaya untuk bagian Tentang UGM */
+.tentang-ugm {
+  padding: 80px 0;
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.judul {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #083d62;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.deskripsi-box {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.ugm-img {
+  width: 100%;
+  max-width: 500px;
+  animation: fadeInImage 2s ease-in-out;
+}
+
+.image-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* Lingkaran besar di belakang gambar */
+.image-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 40px;
+  width: 500px;
+  height: 500px;
+  background-color: rgba(8, 61, 98, 0.1);
+  border-radius: 50%;
+  z-index: -1;
+  animation: fadeInShape 1.5s ease-in-out;
+}
+
+/* Lingkaran kuning di pojok kanan bawah */
+.tentang-ugm::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 150px;
+  height: 150px;
+  background-color: #fdbc2c;
+  border-radius: 50%;
+  z-index: 0;
+  animation: fadeInShape 1.5s ease-in-out;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+  .tentang-ugm {
+    padding: 40px 0;
+  }
+
+  .judul {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .deskripsi-box {
+    margin-top: 20px;
+  }
+
+  .ugm-img {
+    margin-top: 30px;
+  }
+
+  .image-container::before {
+    width: 300px;
+    height: 300px;
+    left: -30px;
+  }
+
+  .tentang-ugm::after {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/* Gaya awal untuk gambar */
+.ugm-img {
+  width: 100%;
+  max-width: 500px;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+/* Efek saat di-hover */
+.ugm-img:hover {
+  transform: scale(1.1); /* Zoom-in */
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Tambahkan bayangan */
 }
