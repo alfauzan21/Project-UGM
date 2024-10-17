@@ -4,7 +4,7 @@
   font-size: 18px;
   line-height: 1.2;
   /* Adjust line-height for better alignment */
-  padding-left: 50px;
+  padding-left: 100px;
 }
 
 /* Adjust text position */
@@ -29,6 +29,11 @@
   font-size: 16px;
   /* Size for "Gadjah Mada" */
   font-weight: 400;
+}
+
+/* Icons Sosmed */
+.navbar-nav .nav-icons {
+  text-align: center;
 }
 
 /* Custom Navbar Style */
@@ -278,20 +283,6 @@
   animation: fadeInShape 1.5s ease-in-out;
 }
 
-/* Lingkaran kuning di pojok kanan bawah */
-.tentang-ugm::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  width: 150px;
-  height: 150px;
-  background-color: #fdbc2c;
-  border-radius: 50%;
-  z-index: 0;
-  animation: fadeInShape 1.5s ease-in-out;
-}
-
 /* Responsif untuk layar kecil */
 @media (max-width: 768px) {
   .tentang-ugm {
@@ -334,4 +325,30 @@
 .ugm-img:hover {
   transform: scale(1.1); /* Zoom-in */
   box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); /* Tambahkan bayangan */
+}
+
+/* Sambutan Rektor */
+.sambutan {
+  background-color: #083d62;
+}
+
+/* Atur teks di bagian atas */
+.top-section h2 {
+  margin-top: 20px;
+  color: #000; /* Ganti sesuai warna yang diinginkan */
+}
+
+section h2 {
+  margin-top: -15px; /* Sesuaikan jarak dari gambar */
+  color: #f8f9fa;
+}
+
+/* Teks di bagian bawah */
+.bottom-section {
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+.bottom-section h2 {
+  color: #000; /* Ganti sesuai warna yang diinginkan */
 }

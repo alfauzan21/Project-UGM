@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar with Hero Section and Hover Effect</title>
+
+    <!-- Feather icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.28.0/feather.min.js"></script>
+
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/style_index.css">
@@ -19,7 +24,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg custom-navbar fixed-top">
-        <div class="container-fluid">
+        <div class="container-fluid position-relative">
             <!-- Logo dan Teks -->
             <a class="navbar-brand d-flex align-items-center text-white" href="#">
                 <img src="assets/img/Lambang-UGM-putih.png" alt="Logo" width="40" height="40"
@@ -29,12 +34,33 @@
                     <span class="gadjah-mada">Gadjah Mada</span>
                 </div>
             </a>
+
             <!-- Toggler untuk mode mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <!-- Link navigasi -->
+
+            <!-- Ikon Media Sosial untuk layar besar (di tengah navbar) -->
+            <ul class="navbar-nav position-absolute top-50 start-50 translate-middle d-flex justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.instagram.com" target="_blank">
+                        <i data-feather="instagram"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.youtube.com" target="_blank">
+                        <i data-feather="youtube"></i>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://www.twitter.com" target="_blank">
+                        <i data-feather="twitter"></i>
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Link navigasi dan ikon media sosial -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
@@ -45,6 +71,26 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">Berita</a>
+                    </li>
+                </ul>
+
+
+                <!-- Ikon Media Sosial (hanya muncul di layar kecil) -->
+                <ul class="navbar-nav d-lg-none mt-3">
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.instagram.com" target="_blank">
+                            <i data-feather="instagram"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com" target="_blank">
+                            <i data-feather="youtube"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.twitter.com" target="_blank">
+                            <i data-feather="twitter"></i>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -82,6 +128,34 @@
             </div>
         </div>
     </section>
+
+    </section>
+    <!-- Section utama (di tengah) -->
+    <section class="sambutan text-light py-4 middle-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Foto Rektor di sebelah kiri -->
+                <div class="col-md-4 text-center mb-4 mb-md-2">
+                    <img src="assets/img/rektor ugm.png" class="img-fluid rounded" alt="Rektor"
+                        style="max-width: 100%; height: auto;">
+                </div>
+                <!-- Teks Sambutan di sebelah kanan -->
+                <div class="col-md-8">
+                    <h2 class="fw-bold">Sambutan Rektor</h2>
+                    <h3>Prof. dr. Ova Emilia, M.Med.Ed., Sp.OG(K), Ph.D.</h3>
+                    <p class="mt-4">
+                        Kami bertekad membekali komunitas yang dinamis dan penuh semangat dengan pendidikan berkualitas
+                        demi hari esok yang lebih baik.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feather Icons script -->
+    <script>
+        feather.replace();
+    </script>
 
     <!-- Bootstrap 5 JS (optional) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

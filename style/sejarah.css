@@ -1,0 +1,45 @@
+/* Style for the building image */
+.building-img {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Style for the ribbon image */
+.ribbon-img {
+  max-width: 300px;
+  height: auto;
+}
+
+/* Lead text for the top section */
+.lead {
+  font-size: 1.1rem;
+  text-align: justify;
+}
+
+/* Background and padding adjustments for the blue and dark sections */
+.bg-primary {
+  background-color: #083d62 !important;
+}
+
+.bg-dark {
+  background-color: #141729 !important;
+}
+
+.p-3 {
+  padding: 1rem !important;
+}
+
+/* Container margin and background */
+.container {
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.mt-4 {
+  margin-top: 1.5rem !important;
+}
