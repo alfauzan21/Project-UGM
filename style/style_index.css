@@ -267,6 +267,7 @@
 .image-container {
   position: relative;
   z-index: 1;
+  background-color: transparent;
 }
 
 /* Lingkaran besar di belakang gambar */
@@ -323,8 +324,8 @@
 
 /* Efek saat di-hover */
 .ugm-img:hover {
-  transform: scale(1.1); 
-  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2); 
+  transform: scale(1.1);
+  box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
 }
 
 /* Sambutan Rektor */
@@ -350,10 +351,63 @@ section h2 {
 }
 
 .bottom-section h2 {
-  color: #000; 
+  color: #000;
 }
 
 /* Pendidikan */
+.image-container2 {
+  background-color: #083d62;
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  margin-left: -130px;
+  margin-right: 100px;
+}
+
+.lambang-ugm {
+  max-width: 150px; /* Ukuran lambang UGM */
+  position: absolute;
+  top: 10px;
+  left: 90px;
+  z-index: 1; /* Z-index lebih rendah agar di belakang */
+}
+
+.vokasi-img {
+  max-width: 250px; /* Ukuran gambar utama */
+  border-radius: 8px;
+  position: relative;
+  left: 150px;
+  z-index: 2; /* Gambar utama di depan lambang */
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact-info strong {
+  color: #fdbc2c;
+}
+.contact-info a {
+  text-decoration: none;
+  color: #0056b3;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
 
 /* Footer */
 footer {
@@ -367,7 +421,7 @@ footer {
   background: url("https://upload.wikimedia.org/wikipedia/commons/1/17/Kampus_UGM.png")
     no-repeat center;
   background-size: cover;
-  height: 100px;
+  height: 80px;
 }
 
 .footer-icons i {
