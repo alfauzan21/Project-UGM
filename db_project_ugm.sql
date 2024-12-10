@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2024 at 04:49 AM
+-- Generation Time: Dec 11, 2024 at 12:14 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.1.17
 
@@ -52,7 +52,12 @@ CREATE TABLE `tb_berita` (
   `judul` varchar(255) NOT NULL,
   `isi` text NOT NULL,
   `tanggal` date NOT NULL,
-  `id_kategori` int(20) DEFAULT NULL
+  `id_kategori` int(20) DEFAULT NULL,
+  `nama_berita` varchar(255) NOT NULL,
+  `kategori_berita` varchar(255) NOT NULL,
+  `tanggal_berita` date NOT NULL,
+  `deskripsi` text NOT NULL,
+  `gambar` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -107,7 +112,7 @@ ALTER TABLE `kategori_berita`
 --
 ALTER TABLE `tb_berita`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD KEY `fk_kategori` (`id_kategori`);
 
 --
 -- Indexes for table `tb_fakultas`
@@ -142,7 +147,7 @@ ALTER TABLE `kategori_berita`
 -- AUTO_INCREMENT for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
-  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `tb_fakultas`
@@ -170,6 +175,7 @@ ALTER TABLE `tb_user`
 -- Constraints for table `tb_berita`
 --
 ALTER TABLE `tb_berita`
+  ADD CONSTRAINT `fk_kategori` FOREIGN KEY (`id_kategori`) REFERENCES `kategori_berita` (`id`),
   ADD CONSTRAINT `tb_berita_ibfk_1` FOREIGN KEY (`id_kategori`) REFERENCES `kategori_berita` (`id`);
 
 --

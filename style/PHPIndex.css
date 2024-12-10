@@ -1,0 +1,27 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling Navbar */
+.custom-navbar {
+  background-color: #083d62;
+}
+.custom-navbar .navbar-text,
+.custom-navbar img {
+  color: #fff;
+}
+.custom-navbar .navbar-text {
+  font-weight: bold;
+}
+
+.univ span {
+  color: #f8f9fa;
+}
